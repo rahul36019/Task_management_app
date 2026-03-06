@@ -1,12 +1,26 @@
 import React from "react";
+import { useState } from "react";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, serPassword] = useState("");
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log("hello guys , form submiited");
+  };
+
   return (
     // Screen-centered container
     <div className="flex h-screen w-screen items-center justify-center bg-gray-100">
       {/* Card Container */}
       <div className="border-2 rounded-2xl border-emerald-600 p-8 sm:p-12 md:p-16 bg-white shadow-lg">
-        <form className="flex flex-col items-center justify-center space-y-4">
+        <form
+          onSubmit={(e) => {
+            submitHandler(e);
+          }}
+          className="flex flex-col items-center justify-center space-y-4"
+        >
           <h2 className="text-2xl font-bold text-emerald-700 mb-4">Login</h2>
 
           {/* Email Input */}
