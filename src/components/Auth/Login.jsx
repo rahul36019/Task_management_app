@@ -3,11 +3,11 @@ import { useState } from "react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [password, serPassword] = useState("");
+  const [password, setPassword] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("hello guys , form submiited");
+    console.log(`hello guys , Email is ${email} and ${password}`);
   };
 
   return (
@@ -26,6 +26,10 @@ const Login = () => {
           {/* Email Input */}
           <input
             required
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
             type="email"
             placeholder="Enter your Email"
             className="outline-none bg-transparent border-2 border-emerald-600 py-3 px-5 rounded-full text-xl placeholder:text-gray-400 focus:ring-2 focus:ring-emerald-400 transition-all"
@@ -33,6 +37,9 @@ const Login = () => {
 
           {/* Password Input */}
           <input
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
             required
             type="password"
             placeholder="Enter your password"
