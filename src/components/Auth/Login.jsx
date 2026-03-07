@@ -8,6 +8,8 @@ const Login = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(`hello guys , Email is ${email} and ${password}`);
+    setEmail("");
+    setPassword(""); // make the password and email input box empty again for new submission
   };
 
   return (
