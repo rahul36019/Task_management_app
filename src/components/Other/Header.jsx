@@ -3,11 +3,13 @@ import React from "react";
 const Header = () => {
   return (
     <div className="flex items-end justify-between">
-      <h1>
+      <h1 className="text-2xl font-medium">
         Hello <br />
-        Rahul
+        <span className="text-3xl font-medium">Rahul &#x1F44B;</span>
       </h1>
-      <button>Log Out</button>
+      <button className="bg-red-600 text-white px-5 py-2 rounded-sm">
+        Log Out
+      </button>
     </div>
   );
 };
