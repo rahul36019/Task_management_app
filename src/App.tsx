@@ -1,15 +1,14 @@
 import "./index.css";
 // import Login from "./components/Auth/Login";
-import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
-import TaskListNumber from "./components/Other/TaskListNumber";
-import TaskList from "./components/Other/TaskList";
+// import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
+import AdminDashBoard from "./components/Dashboard/AdminDashBoard";
 
 export default function App() {
   return (
     <>
-      <EmployeeDashboard />
-      <TaskListNumber />
-      <TaskList />
+      {/* <Login></Login> */}
+      {/* <EmployeeDashboard /> */}
+      <AdminDashBoard />
     </>
   );
 }
